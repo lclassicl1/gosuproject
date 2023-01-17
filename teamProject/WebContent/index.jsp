@@ -26,7 +26,8 @@
 	<script>
 		$(function(){
 			$('#register').click(function(){
-				alert('회원가입버튼');
+				//alert('회원가입버튼');
+				location.href='<%=request.getContextPath()%>/register/registerForm.jsp';
 			});
 		});
 	</script>
