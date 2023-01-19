@@ -6,6 +6,7 @@
 <head>
   	<!-- google cdn 방식 jquery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel='stylesheet' type='text/css' href='css/index.css'>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Gosu프로젝트 처음으로 보여질 첫페이지 입니다.</title>
