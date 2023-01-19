@@ -27,7 +27,7 @@
 	<li>전화번호:<input type='text' id='user_hp' name='user_hp' placeholder="전화번호를 입력해주세요(-제외)"/></li>
 	<li>주소:<input type='text' id='user_address' name='user_address' placeholder="주소(시,구)를 입력해주세요"/></li>
 	<li>이메일:<input type="email" id='user_email' name='user_email' placeholder="이메일을 입력해주세요"/></li>
-	<li><input type="radio" value="남"/>남 </li>
+	<li><input type="radio" value="M" id='user_gender' name='user_gender'/>남 </li>
 	<li>보유자격증:<input type='text' id='user_skill' name='user_skill' placeholder="보유자격증을 입력해주세요"/></li>
 	<li>학력사항:<input type='text' id='user_school' name='user_school' placeholder="최종학력사항을 입력해주세요"/></li>
 	<li><input type='submit' value='회원가입하기'/>&nbsp;<input type='button' value='취소' id='cancel' name='cancel'/></li>
