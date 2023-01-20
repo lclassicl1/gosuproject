@@ -35,13 +35,15 @@
 </head>
 <body>
 	<h1>코딩지옥에 오신걸 환영합니다.</h1><br/>
-	contextPath:<%=request.getContextPath() %>
-		<div><img src="/image/mainimg2.jpg"/></div><br/>
+	주소 : contextPath:<%=request.getContextPath() %>
+		<div><img src="http://localhost/teamProject/image/mainimg2.jpg"/></div><br/>
 		<form action="<%=request.getContextPath()%>/helper/login.do" method='post'>
 		<div>아이디<input type='text' id='userid' name='userid' class='text1'/><br/>
 		비밀번호<input type='password' id='userpwd' name='userpwd' class='text1'>
 		<input type='submit' value='로그인' class='text1' id='submit'/><br/>
 		<input type='button' value='회원가입' id='register'/><input type='button' value='비밀번호찾기' id='findpwd'/></div>
 		</form>
+		<hr/>
+		<a href='<%=request.getContextPath()%>/helper/trade.do'>트레이드게시판으로</a>
 </body>
 </html>
