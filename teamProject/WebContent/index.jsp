@@ -6,9 +6,11 @@
 <head>
   	<!-- google cdn 방식 jquery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <link rel='stylesheet' type='text/css' href='css/index.css'>
+  <script src='js/bootstrap.js'></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css'/>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'/>
 	<title>Gosu프로젝트 처음으로 보여질 첫페이지 입니다.</title>
 	<style>
 		h1 {
@@ -35,13 +37,17 @@
 </head>
 <body>
 	<h1>코딩지옥에 오신걸 환영합니다.</h1><br/>
+
+
 	주소 : contextPath:<%=request.getContextPath() %>
 		<div><img src="http://localhost/teamProject/image/mainimg2.jpg"/></div><br/>
+
 		<form action="<%=request.getContextPath()%>/helper/login.do" method='post'>
 		<div>아이디<input type='text' id='userid' name='userid' class='text1'/><br/>
 		비밀번호<input type='password' id='userpwd' name='userpwd' class='text1'>
 		<input type='submit' value='로그인' class='text1' id='submit'/><br/>
 		<input type='button' value='회원가입' id='register'/><input type='button' value='비밀번호찾기' id='findpwd'/></div>
+		<div><a href="<%=request.getContextPath()%>/helper/trade.do">트레이드게시판으로</a></div>
 		</form>
 		<hr/>
 		<a href='<%=request.getContextPath()%>/helper/trade.do'>트레이드게시판으로</a>
