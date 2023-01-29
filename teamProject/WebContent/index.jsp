@@ -27,62 +27,17 @@
 	</script>
 </head>
 <body>
-	<a href="<%=request.getContextPath()%>/helper/index.do" class="logo" target="_blank">
-    <img src="https://assets.codepen.io/1462889/fcy.png" alt="main">
-  </a>
-  <div class="section">
-    <div class="container">
-      <div class="row full-height justify-content-center">
-        <div class="col-12 text-center align-self-center py-5">
-          <div class="section pb-5 pt-5 pt-sm-2 text-center">
-            <h6 class="mb-0 pb-3"><span>로그인 </span><span>회원가입</span></h6>
-                  <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
-                  <label for="reg-log"></label>
-            <div class="card-3d-wrap mx-auto">
-              <div class="card-3d-wrapper">
-                <div class="card-front">
-                  <div class="center-wrap">
-                    <div class="section text-center">
-                      <h4 class="mb-4 pb-3">로그인</h4>
-                      <div class="form-group">
-                        <input type="text" name="user_id" class="form-style" placeholder="Your id" id="user_id" autocomplete="off">
-                        <i class="input-icon uil uil-at"></i>
-                      </div>  
-                      <div class="form-group mt-2">
-                        <input type="password" name="user_pwd" class="form-style" placeholder="Your Password" id="user_pwd" autocomplete="off">
-                        <i class="input-icon uil uil-lock-alt"></i>
-                      </div>
-                      <a href="javascript:void(0);" class="btn mt-4" id='loginSubmit'>submit</a>
-                                    <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
-                        </div>
-                      </div>
-                    </div>
-                <div class="card-back">
-                  <div class="center-wrap">
-                    <div class="section text-center">
-                      <h4 class="mb-4 pb-3">회원가입</h4>
-                      <div class="form-group">
-                        <input type="text" name="logname" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off">
-                        <i class="input-icon uil uil-user"></i>
-                      </div>  
-                      <div class="form-group mt-2">
-                        <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-                        <i class="input-icon uil uil-at"></i>
-                      </div>  
-                      <div class="form-group mt-2">
-                        <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
-                        <i class="input-icon uil uil-lock-alt"></i>
-                      </div>
-                      <a href="#" class="btn mt-4" id='registerSubmit'>submit</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-  </div>
+	<h1>코딩지옥에 오신걸 환영합니다.</h1><br/>
+	주소 : contextPath:<%=request.getContextPath() %>
+		<div><img src="http://localhost/teamProject/image/mainimg2.jpg"/></div><br/>
+		<form action="<%=request.getContextPath()%>/helper/login.do" method='post'>
+		<div>아이디<input type='text' id='user_id' name='user_id' class='text1'/><br/>
+		비밀번호<input type='password' id='user_pwd' name='user_pwd' class='text1'>
+		<input type='submit' value='로그인' class='text1' id='submit'/><br/>
+		<input type='button' value='회원가입' id='register'/><input type='button' value='비밀번호찾기' id='findpwd'/></div>
+		<div><a href="<%=request.getContextPath()%>/helper/trade.do">트레이드게시판으로</a></div>
+		</form>
+		<hr/>
+		<a href='<%=request.getContextPath()%>/helper/trade.do'>트레이드게시판으로</a>
 </body>
 </html>
