@@ -11,28 +11,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css'/>
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'/>
-	<title>Gosu프로젝트 처음으로 보여질 첫페이지 입니다.</title>
-	<style>
-		h1 {
-			text-align: center;
-		}
-		
-		div {
-			text-align: center;
-		}
-		
-		img {
-			width: 400px;
-			height: 400px;
-		}
-	</style>
+  <link rel='stylesheet' type='text/css' href='<%=request.getContextPath()%>/css/thema.css'/>
+ 	<title>INDEX</title>
+	<style>	</style>
 	<script>
 		$(function(){
-			$('#register').click(function(){
-				//alert('회원가입버튼');
-				location.href='/teamProject/helper/register.do';
+			$('#loginSubmit').click(function(){
+				$.ajax({
+					type:"post",
+					url:"<%=request.getContextPath()%>/helper/main.do"
+				});
 			});
 		});
+	
 	</script>
 </head>
 <body>
