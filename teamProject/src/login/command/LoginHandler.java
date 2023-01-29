@@ -7,6 +7,7 @@ import mvc.command.CommandHandler;
 
 public class LoginHandler implements CommandHandler {
 	private final static String LOGIN_VIEW = "/view/login/loginSuccess.jsp";
+	private final static String LOGINFORM_VIEW = "/index.jsp";
 
 	@Override
 	public String process(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -33,7 +34,7 @@ public class LoginHandler implements CommandHandler {
 	}
 
 	private String processForm(HttpServletRequest request, HttpServletResponse response) {
-			return null;
+			return LOGINFORM_VIEW;
 	}
 
 

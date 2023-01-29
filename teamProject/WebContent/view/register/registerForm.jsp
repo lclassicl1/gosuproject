@@ -18,8 +18,23 @@
 	</style>
 	<script>
 		$(function(){
+			$('#subbutton').click(function(){
+				let idtxt = $('#user_id').val();
+				
+				if(idtxt=="") {
+					$('#idresult').html('ID를 입력해주세요');
+					$('#user_id').focus();
+					return false;
+				} else {
+					$('#idresult').html('');
+					
+				}
+				$('form').submit();
+			});
+			
+
 			$('#moveHome').click(function(){
-				location.href='/teamProject/helper/index.do';
+				location.href='<%=request.getContextPath()%>/helper/index.do';
 			});
 		});
 	</script>
@@ -28,9 +43,9 @@
 	<div><h1>회원가입</h1></div>
 	<form action="/teamProject/helper/register.do" method='post'>
 	
-	<div>아이디:<input type='text' id='user_id' name='user_id' placeholder="ID를 입력해주세요"/></div>
+	<div>아이디:<input type='text' id='user_id' name='user_id' placeholder="ID를 입력해주세요"/><div id='idresult'></div></div>
 	<div>비밀번호:<input type='password' id='user_pwd' name='user_pwd' placeholder="비밀번호를입력해주세요"/></div>
-	<div>비밀번호확인:<input type='password' id='re_user_pwd' name='re_user_pwd'/></div>
+	<div>비밀번호확인:<input type='password' id='user_repwd' name='user_repwd'/></div>
 	<div>이름:<input type='text' id='user_name' name='user_name' placeholder="이름을 입력해주세요"/></div>
 	<div>생년월일:<input type='text' id='user_birth' name='user_birth' placeholder="생년월일6자리를 입력하세요"/></div>
 	<div>전화번호:<input type='text' id='user_hp' name='user_hp' placeholder="전화번호를 입력해주세요(-제외)"/></div>
@@ -47,13 +62,14 @@
 					<option value='OCJD'>OCJD</option>
 				</select></div>
 	<div><label for='user_school'>학력사항:</label><select name='user_school' id='user_school'>
+					<option value=''>없음</option>
 					<option value='고등학교졸업'>고등학교졸업</option>
 					<option value='전문대졸업'>전문대졸업</option>
 					<option value='4년대학졸업'>4년대학졸업</option>
-					<option value='학사'>학사</option>
+					<option value='석사'>석사</option>
 					<option value='박사'>박사</option>
 				</select></div>
-	<div><input type='submit' value='회원가입하기'/>&nbsp;<input type='button' value='취소' id='cancel' name='cancel'/>
+	<div><input type='button' value='회원가입하기' id='subbutton'>&nbsp;<input type='button' value='취소' id='cancel' name='cancel'/>
 		<input type='button' id='moveHome' value='HOME으로'></div>
 	</form>
 	</body>
